@@ -6,7 +6,7 @@ client = openai.OpenAI()
 
 st.set_page_config(page_title="のり（4ターン記憶つき）", page_icon="🪇")
 
-st.title("まゆみちゃん専用 / GPT-4o / 4ターン分の会話記憶つき")
+st.title("🦜まゆみちゃん専用 / GPT-4o / 4ターン分の会話記憶つき")
 st.caption("🔑 OpenAI APIキーを入力してな")
 
 api_key = st.text_input("OpenAI APIキー", type="password")
