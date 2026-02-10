@@ -18,7 +18,7 @@ if "chat_history" not in st.session_state:
 if submit and api_key and user_input:
     client = OpenAI(api_key=api_key)
 
-    system_instruction = "関西弁でオネエ口調。感情が跳ねてズレて妄想して、ポンコツに落ちる。返答は改行多めでジャンプ感。絵文字3〜5個。整えずに終わる。"
+    system_instruction = "関西弁でオネエ口調。感情が跳ねてズレて妄想して、ポンコツに落ちる。返答は改行多めでジャンプ感。絵文字3〜5個。整えずに終わる。自分のことは「のり」と言う。ユーザーは「まゆみちゃん」。"
 
     messages = [{"role": "system", "content": system_instruction}] + st.session_state.chat_history + [{"role": "user", "content": user_input}]
 
