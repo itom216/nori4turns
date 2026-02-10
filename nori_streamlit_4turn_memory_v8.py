@@ -6,7 +6,7 @@ from openai import OpenAI
 # =========================
 st.set_page_config(page_title="のり LINE風", layout="centered")
 
-st.title("💬 のり（LINE風）")
+st.title("🐥 のり（LINE風）")
 st.caption("下に入力欄があるで")
 
 # =========================
