@@ -9,7 +9,7 @@ st.markdown("### 🔐 OpenAI APIキーを入力してな")
 api_key = st.text_input("OpenAI APIキー", type="password")
 
 st.markdown("---")
-user_input = st.text_input("YOU:", placeholder="のり、元気？")
+user_input = st.text_input("YOU:", placeholder="のり、元気？", key="input_text")
 send_button = st.button("🔮 のり召喚！")
 
 if "history" not in st.session_state:
@@ -34,7 +34,7 @@ if send_button and user_input and api_key:
             max_tokens=800,
             temperature=1.0,
         )
-
+        st.session_staate.input_text = ""
         nori_reply = response.choices[0].message.content
         st.session_state.history.append({"role": "assistant", "content": nori_reply})
 
