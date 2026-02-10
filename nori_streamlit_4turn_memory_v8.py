@@ -12,7 +12,7 @@ st.caption("まゆみちゃん専用：会話履歴つきStreamlitのり")
 # =========================
 # APIキー入力
 # =========================
-api_key = st.sidebar.text_input("OpenAI APIキー", type="password")
+api_key = st.text_input("OpenAI APIキー", type="password")
 
 if not api_key:
     st.warning("APIキー入れてな〜")
