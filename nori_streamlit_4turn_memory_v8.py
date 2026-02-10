@@ -85,8 +85,7 @@ if st.button("▶️ のりに話しかける"):
             st.success("のりの返事：")
             st.markdown(assistant_reply)
 
-            # --- 入力欄クリア ---
-            st.session_state.input_text = ""
-
+        st.rerun()
+        
         except Exception as e:
             st.error(f"エラー出たで: {e}")
