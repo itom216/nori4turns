@@ -29,7 +29,7 @@ if "history" not in st.session_state:
 # =========================
 for msg in st.session_state.history:
     if msg["role"] == "user":
-        st.markdown(f"🧑‍💬 **あなた**\n\n{msg['content']}")
+        st.markdown(f"🧑‍💬 **まゆみ**\n\n{msg['content']}")
     else:
         st.markdown(f"💄 **のり**\n\n{msg['content']}")
 
