@@ -1,6 +1,6 @@
 
 import streamlit as st
-import openai
+from openai import OpenAI
 from datetime import datetime
 import os
 
@@ -14,7 +14,7 @@ if not api_key:
     st.warning("APIキーを入力してな")
     st.stop()
 
-openai.api_key = api_key
+client = OpenAI(api_key = api_key)
 
 # セッション状態に履歴がなければ初期化
 if "history" not in st.session_state:
@@ -33,13 +33,13 @@ if st.button("▶️ のりに話しかける"):
 
         # API呼び出し
         try:
-            response = openai.ChatCompletion.create(
+            response = client.chat.completions.create(
                 model="gpt-4o",
                 messages=st.session_state.history,
                 temperature=1.0,
                 max_tokens=800,
             )
-            assistant_reply = response["choices"][0]["message"]["content"]
+            assistant_reply = response.choices[0].message.content
             st.session_state.history.append({"role": "assistant", "content": assistant_reply})
             st.success("のりの返事：")
             st.markdown(assistant_reply)
