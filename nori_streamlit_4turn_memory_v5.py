@@ -34,7 +34,7 @@ if send_button and user_input and api_key:
             max_tokens=800,
             temperature=1.0,
         )
-        st.session_staate.input_text = ""
+        st.session_state.input_text = ""
         nori_reply = response.choices[0].message.content
         st.session_state.history.append({"role": "assistant", "content": nori_reply})
 
