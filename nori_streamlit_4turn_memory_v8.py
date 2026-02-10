@@ -6,7 +6,7 @@ from openai import OpenAI
 # =========================
 st.set_page_config(page_title="のり 4ターン記憶つき", layout="centered")
 
-st.title("🧠 のり with 4ターン記憶")
+st.title("😀 のり with 4ターン記憶")
 st.caption("まゆみちゃん専用：会話履歴つきStreamlitのり")
 
 # =========================
