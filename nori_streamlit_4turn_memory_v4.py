@@ -2,6 +2,8 @@
 import streamlit as st
 import openai
 
+client = openai.OpenAI()
+
 st.set_page_config(page_title="のり（4ターン記憶つき）", page_icon="🪇")
 
 st.title("まゆみちゃん専用 / GPT-4o / 4ターン分の会話記憶つき")
@@ -39,7 +41,7 @@ if st.button("🔮 のり召喚！"):
     messages.append({"role": "user", "content": user_message})
 
     try:
-        response = openai.ChatCompletion.create(
+        response = client.chat.completions.create(
             model="gpt-4o",
             messages=messages,
             max_tokens=800,
