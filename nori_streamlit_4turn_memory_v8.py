@@ -21,7 +21,7 @@ if "history" not in st.session_state:
     st.session_state.history = []
 
 # ユーザー入力
-user_input = st.text_input("のりに話しかけてみてな❤️", value="", key="input_text")
+user_input = st.text_input("のりに話しかけてみてな❤️", key="input_text")
 
 # 送信ボタン
 if st.button("▶️ のりに話しかける"):
