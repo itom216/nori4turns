@@ -29,7 +29,7 @@ if "history" not in st.session_state:
 # =========================
 # ★ ここ重要：formで送信（Enter対応）
 # =========================
-with st.form(key="chat_form", clear_on_submit=False):
+with st.form(key="chat_form", clear_on_submit=True):
 
     user_input = st.text_input(
         "のりに話しかけてみてな❤️",
@@ -97,11 +97,7 @@ if submitted and user_input.strip() != "":
         st.success("のりの返事：")
         st.markdown(assistant_reply)
 
-        # ---------------------
-        # 入力欄クリア
-        # ---------------------
-        st.session_state.input_text = ""
-
+        
     except Exception as e:
         st.error(f"エラー出たで: {e}")
 
