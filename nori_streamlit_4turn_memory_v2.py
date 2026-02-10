@@ -3,7 +3,7 @@ import streamlit as st
 import openai
 
 # タイトルと説明
-st.title("🪇 のり召喚チャット（4ターン記憶つき）")
+st.title("🐥 のり召喚チャット（4ターン記憶つき）")
 st.caption("まゆみちゃん専用 / GPT-4o / 4ターン分の会話記憶あり")
 
 # APIキー入力（セキュリティのため毎回入力）
