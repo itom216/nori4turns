@@ -3,7 +3,7 @@ import streamlit as st
 from openai import OpenAI
 
 # APIキー入力欄
-st.title("まゆみちゃん専用 / GPT-4o / 4ターン分の会話記憶つき")
+st.title("🐣まゆみちゃん専用 / GPT-4o / 4ターン分の会話記憶つき")
 api_key = st.text_input("🔑 OpenAI APIキーを入力してな", type="password")
 
 # 入力欄
